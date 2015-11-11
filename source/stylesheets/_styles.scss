@@ -1,0 +1,69 @@
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro&subset=latin,cyrillic);
+
+a { text-decoration: none;}
+ul {list-style-type: none;}
+a:visited{color: inherit;}
+p {line-height: 1.3;}
+
+header {
+
+}
+.header_logo a {
+  font-family: 'Anonymous Pro' ;
+  font-size: 36px;
+}
+
+.main_menu {
+  font-family: 'Anonymous Pro' ;
+  text-align: right;
+}
+.menu_link {
+  display: inline-block;
+  margin: 0px 5px;
+}
+.menu_link a {
+  color:grey;
+  font-size: 24px;
+}
+
+.tags  {
+  font-family: 'Anonymous Pro' ;
+  margin: 0 5px;
+  padding: 0 0 0 15px;
+}
+
+
+
+.tags a {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: white;
+  text-decoration: none;
+  background: #757575;
+  padding: 2px 5px;
+}
+
+
+.post {
+  font-family: monospace;
+  margin: 0 0 40px;
+  border-bottom: 1px dashed #929292;
+}
+
+.post_title {
+  font-family: 'Anonymous Pro' ;
+  margin: 0 0 10px;
+
+}
+
+.post_tags {
+  font-family: 'Anonymous Pro' ;
+  font-size: 14px;
+  color: #C3C3C3;
+  background: rgb(102, 51, 153);
+}
+
+.post_body {
+  font-family: Helvetica, sans-serif;
+}
