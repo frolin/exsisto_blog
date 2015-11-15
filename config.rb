@@ -21,7 +21,7 @@ activate :livereload
 
 
 activate :syntax
-set :markdown_engine, :redcarpet
+set :markdown_engine, :kramdown
 set :markdown, fenced_code_blocks: true
 
 
@@ -142,3 +142,11 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
+# activate :directory_indexes

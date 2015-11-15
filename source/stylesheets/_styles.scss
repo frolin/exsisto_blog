@@ -1,13 +1,28 @@
+//  ###                     ###
+//   ##                      ##
+//   ##      ####  ####      ##   ####  ######
+//   #####  ##  ##    ##  #####  ##  ##  ##  ##
+//   ##  ## ###### ##### ##  ##  ######  ##
+//   ##  ## ##    ##  ## ##  ##  ##      ##
+//  ###  ##  ##### #####  ######  ##### ####
 //
-//header {
-//
-//}
-//
+
 .header__logo  {
   font-family: 'Anonymous Pro' ;
   margin-bottom: 0;
 }
+
+
+
+//  ##   ##   ##   #### ##   ##         ##   ## ####### ##   ## ##   ##
+//  ### ###  ####   ##  ###  ##         ### ###  ##   # ###  ## ##   ##
+//  ####### ##  ##  ##  #### ##         #######  ## #   #### ## ##   ##
+//  ####### ##  ##  ##  ## ####  ###### #######  ####   ## #### ##   ##
+//  ## # ## ######  ##  ##  ###         ## # ##  ## #   ##  ### ##   ##
+//  ##   ## ##  ##  ##  ##   ##         ##   ##  ##   # ##   ## ##   ##
+//  ##   ## ##  ## #### ##   ##         ##   ## ####### ##   ##  #####
 //
+
 .main-menu {
   font-family: 'Anonymous Pro' ;
   text-align: right;
@@ -16,6 +31,19 @@
   display: inline-block;
   color:grey;
 }
+
+
+
+//                                        ##
+//                                        ##
+//  ##  ##   ####  #####  ##  ##         #####   ####   ### ## #####
+//  ####### ##  ## ##  ## ##  ##   ###### ##        ## ##  ## ##
+//  ## # ## ###### ##  ## ##  ##          ##     ##### ##  ##  #####
+//  ##   ## ##     ##  ## ##  ##          ## ## ##  ##  #####      ##
+//  ##   ##  ##### ##  ##  ######          ###   #####     ## ######
+//                                                     #####
+
+
 //
 .menu-tags  {
   font-family: 'Anonymous Pro' ;
@@ -34,6 +62,19 @@
 }
 //
 //
+
+
+
+//                         ##
+//                         ##
+//  ######   ####   ##### #####
+//   ##  ## ##  ## ##      ##
+//   ##  ## ##  ##  #####  ##
+//   #####  ##  ##      ## ## ##
+//   ##      ####  ######   ###
+//  ####
+
+
 .post {
   border-style:dashed;
   border-color: #929292;
@@ -41,21 +82,10 @@
 //
 .post_title {
   font-family: "Pt Sans";
-}
-//
-.breadcrumb {
-  font-family: "Anonymous Pro";
-  word-spacing: -1px;
-
+  color: rgb(89, 89, 89);
 }
 
-.breadcrumb .separator {
-  padding: 0 10px;
-}
 
-.breadcrumb .category {
-  text-decoration: underline;
-}
 .post_author {
   color: grey;
 }
@@ -64,10 +94,47 @@
 .post_tags {
   font-family: 'Anonymous Pro' ;
   color: #FDFDFD;
-  background: rgb(102, 51, 153);
+  background: rgb(182, 182, 182);
 }
 //
 .post_body {
   font-family: "Pt Sans";
 
+}
+blockquote.info {
+  background-color: #ECECEC;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: cadetblue;
+}
+
+//  ###                            ###                                ###
+//   ##                             ##                                 ##
+//   ##    ######   ####  ####      ##   #### ######  ##  ##  ##  ##   ##     #####
+//   #####  ##  ## ##  ##    ##  #####  ##  ## ##  ## ##  ##  #######  ##### ##
+//   ##  ## ##     ###### ##### ##  ##  ##     ##     ##  ##  ## # ##  ##  ## #####
+//   ##  ## ##     ##    ##  ## ##  ##  ##  ## ##     ##  ##  ##   ##  ##  ##     ##
+//  ###### ####     ##### #####  ######  #### ####     ###### ##   ## ###### ######
+//
+
+
+
+.breadcrumb {
+  font-family: "Anonymous Pro";
+  word-spacing: -1px;
+}
+
+.breadcrumb .delimiter {
+  padding: 0 10px;
+  font-size: 1.133rem;
+  color: #757575;
+}
+
+.breadcrumb__category {
+  display: inline-block;
+}
+
+.breadcrumb .category {
+  color: #757575;
+  border-bottom: 1px dashed lightslategrey;
 }

@@ -43,16 +43,17 @@ img {
   @include margin-trailer();
 }
 
-.highlight {
-  @include margin-trailer();
-}
+
 
 .post {
   @include trailing-border(2px, 0);
   @include margin-trailer(2);
 }
 
-a { text-decoration: none;}
+a {
+  text-decoration: none;
+  //link-colors(rgb(89, 89, 89);)
+}
 ul {list-style-type: none;}
 a:visited{color: inherit;}
 
@@ -73,3 +74,18 @@ h1, h2, p, iframe, img{
   display: block;
 }
 
+.highlight {
+  @include padding-leader(.5);
+  @include padding-trailer(.5);
+  @include margin-trailer(1);
+  @include adjust-font-size-to(.9rem);
+}
+
+
+blockquote.info {
+  @include margin-trailer(1);
+  @include margin-leader(1);
+
+  @include padding-leader(.5);
+  @include padding-trailer(.5);
+}

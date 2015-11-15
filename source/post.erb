@@ -1,12 +1,24 @@
 <% wrap_layout :layout do %>
-  <div class="breadcrumb small">
+  <div class="breadcrumb">
+    <h3 class="breadcrumb__category">
         <%= post_breadcrumbs %>
+    </h3>
+    <span class="delimiter">
+      /
+    </span>
   </div>
 
 
   <article class="full_post">
-    <h1><%= current_article.title %></h1>
-    <%= current_article.body %>
+
+    <div class="post_title">
+      <h2><%= current_article.title %></h2>
+    </div>
+
+    <div class="post_body">
+      <%= current_article.body %>
+    </div>
+
   </article>
 <%end%>
 

@@ -12,11 +12,12 @@ module CustomHelpers
 
   def post_breadcrumbs
      category = current_article.metadata[:page]['category']
-     title = current_article.title
-     category_link =  link_to "#{category}", category_path(category), class:'category'
+     # title = current_article.title
 
-    category_link +
-        content_tag(:span, '/', class: 'separator') +
-        content_tag(:span, title.downcase, class:'breadrumb-title')
+     link_to "#{category}", category_path(category), class:'category'
+
+    # category_link +
+    #     content_tag(:span, '/', class: 'separator') +
+    #     content_tag(:span, title.downcase, class:'breadrumb-title')
   end
 end
