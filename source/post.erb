@@ -1,4 +1,12 @@
-<%= current_article.title %>
-<%= current_article.body %>
+<% wrap_layout :layout do %>
+  <div class="breadcrumb small">
+        <%= post_breadcrumbs %>
+  </div>
 
+
+  <article class="full_post">
+    <h1><%= current_article.title %></h1>
+    <%= current_article.body %>
+  </article>
+<%end%>
 

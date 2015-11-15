@@ -8,30 +8,34 @@
     <%= stylesheet_link_tag "all" %>
   </head>
   <body>
-  <header>
-    <div class="header_logo">
-      <a href="/">Exsisto</a>
-    </div>
+    <div class="wrapper">
 
-    <div class="menu">
-      <ul class="main_menu">
-        <li class="menu_link"><a href="works">works</a></li>
-        <li class="menu_link"><a href="about_us">about_us</a></li>
-      </ul>
-    </div>
-  </header>
-  <aside>
-      <ul class="tags">
-        <% blog.tags.each do |tag, articles| %>
-            <li><%= link_to "#{tag}", tag_path(tag) %></li>
-        <% end %>
-      </ul>
-    </aside>
+      <div id="main" role="main">
+        <%= yield %>
+      </div>
 
-    <div id="main" role="main">
-      <%= yield %>
-    </div>
-    
 
+      <aside id="sidebar">
+        <div class="aside__inner">
+          <h2 class="header__logo">
+            <a href="/">Exsisto</a>
+          </h2>
+
+          <ul class="menu-tags">
+            <% categories.each do |category| %>
+                <li><%= link_to "#{category}", category_path(category) %></li>
+            <% end %>
+          </ul>
+        </div>
+      </aside>
+
+
+        <!--<div class="main-menu">-->
+            <!--<a href="#works">works | </a>-->
+            <!--<a href="#about_us">about_us | </a>-->
+        <!--</div>-->
+
+    </div>
   </body>
+<%= javascript_include_tag 'app.js', 'scroll_spy' %>
 </html>

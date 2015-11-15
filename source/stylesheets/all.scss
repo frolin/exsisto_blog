@@ -1,2 +1,9 @@
-@import "susy_grid";
+@import "susy";
+
+
+@import "layouts/base_grid";
+@import 'typography/syntax_highlight.css.erb';
+@import 'typography/base_typography';
+@import "layouts/posts";
+@import "layouts/categories";
 @import "styles";

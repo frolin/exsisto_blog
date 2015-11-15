@@ -1,0 +1,75 @@
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro&subset=latin,cyrillic);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+
+//@import 'modular-scale';
+
+//$ms-base: 1em;
+//$ms-ratio: $golden;
+
+$base-font-size: 22px !global;
+$base-line-height: 33px !global;
+$rhythm-unit: "rem" !global;
+$rem-with-px-fallback: true !global;
+@include establish-baseline();
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Pt Sans", sans-serif;
+
+}
+.wrapper {
+  //@include debug-vertical-alignment;
+}
+
+#main {
+  @include rhythm-margins(1);
+}
+
+//.highlight {
+//  @include rhythm-margins(1);
+//}
+
+
+
+img {
+  width: 100%;
+  margin: auto;
+  display: block;
+  @include margin-trailer();
+}
+
+.highlight {
+  @include margin-trailer();
+}
+
+.post {
+  @include trailing-border(2px, 0);
+  @include margin-trailer(2);
+}
+
+a { text-decoration: none;}
+ul {list-style-type: none;}
+a:visited{color: inherit;}
+
+
+h1 { @include adjust-font-size-to(3.157rem); }
+h2 { @include adjust-font-size-to(2.369rem); }
+h3 { @include adjust-font-size-to(1.777rem); }
+h4 { @include adjust-font-size-to(1.133rem); }
+h5 { @include adjust-font-size-to(1rem); }
+h6 { @include adjust-font-size-to(.75rem); }
+
+h1, h2, p, iframe, img{
+  @include margin-trailer();
+}
+
+.small {
+  @include adjust-font-size-to(.75rem);
+  display: block;
+}
+

@@ -1,0 +1,55 @@
+
+$susy : (
+        columns: 4 7 3 2 3 1,
+        output: isolate,
+        //container: 1140px,
+        //debug: (image: show)
+);
+
+
+.wrapper {
+  @include container;
+}
+
+//header {
+//  @include container;
+//  height: 60px;
+//}
+
+
+#sidebar {
+  @include span(1 first);
+  text-align: center;
+  position: fixed;
+
+}
+.aside__inner {
+}
+
+#main {
+  @include span(3 at 2);
+  padding: 0 2rem;
+}
+
+.header__logo {
+
+}
+
+.main-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.sitename {
+//@include span(last 10)
+}
+
+
+
+
+.main-menu {
+  @include span(1);
+  position: absolute;
+  right: 0;
+  top:0;
+}

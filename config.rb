@@ -1,17 +1,37 @@
 ###
 # Blog settings
 ###
+require "lib/custom_helpers"
+helpers CustomHelpers
+
+
 require 'susy'
+require 'modular-scale'
+
 # Time.zone = "UTC"
 
+# activate :blog_ui
+# activate :breadcrumbs
+
+
 activate :sprockets
+sprockets.append_path File.join root, 'bower_components'
+
+activate :livereload
+
+
+activate :syntax
+set :markdown_engine, :redcarpet
+set :markdown, fenced_code_blocks: true
+
+
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
 
   # Указываем какие ссылки должен генерировать middleman
-  blog.permalink = "posts/{category}/{title}"
+  blog.permalink = "{category}/{title}"
 
   # Все посты хранятся, конечно же, в markdown
   blog.default_extension = ".md"
@@ -20,19 +40,19 @@ activate :blog do |blog|
   blog.layout = "post"
 
   # А файлы с постами берём по следующему пути (с префиксом source/, в котором лежит исходный код сайта)
-  blog.sources = "blog/posts/{category}/{title}"
+  blog.sources = "posts/{author}/category/{category}/{title}"
 
   # Ну и сгенерируем отдельные страницы для категорий постов
   blog.custom_collections = {
       category: {
-          link: '/categories/{category}/posts.html',
+          link: '{category}/posts.html',
           template: '/category.html'
       }
   }
+  blog.taglink = "tags/{tag}.html"
 
   # Matcher for blog source files
   # blog.sources = "blog/{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
   # blog.layout = "layout"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
@@ -57,9 +77,9 @@ page "/feed.xml", layout: false
 ###
 
 # Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+compass_config do |config|
+  config.output_style = :compact
+end
 
 ###
 # Page options, layouts, aliases and proxies
@@ -90,7 +110,6 @@ page "/feed.xml", layout: false
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-activate :livereload
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -98,6 +117,7 @@ activate :livereload
 #     "Helping"
 #   end
 # end
+
 
 set :css_dir, 'stylesheets'
 
