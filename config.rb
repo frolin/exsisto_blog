@@ -42,6 +42,7 @@ activate :blog do |blog|
   # А файлы с постами берём по следующему пути (с префиксом source/, в котором лежит исходный код сайта)
   blog.sources = "posts/{author}/category/{category}/{title}"
 
+  blog.summary_separator = /(READMORE)/
   # Ну и сгенерируем отдельные страницы для категорий постов
   blog.custom_collections = {
       category: {
