@@ -2,34 +2,36 @@
   <%= category %>
 <% end %>
 
+<div class="breadcrumb">
+  <h3 class="breadcrumb__category">
+    <%= category %>
+  </h3>
+    <span class="delimiter">
+      /
+    </span>
+</div>
+
 <div class="category-header" id="<%= category %>">
   <div class="category-image">
     <%= image_tag "categories/#{category}.png" %>
   </div>
-  <h2>
-    <%= category %>
-  </h2>
+
 </div>
 
-  <% articles.each do |article| %>
-  <article class="category-post">
-      <div class="category__post_image">
-        <%= image_tag lorem.image('200x200') %>
-      </div>
-    <div class="category__post_article">
-      <h4 class="category__post_title">
+<% articles.each do |article| %>
+  <article class="category__post_article">
+    <h3 class="category__post_title">
         <%= link_to article.title, article.url %>
-      </h4>
-      <div class="category__post_body">
-        <%= article.summary(200) %>
-      </div>
-    </div>
-    <span class="category__post_tags small">
-      [<%= article.tags.join(', ')%>]
-    </span>
+    </h3>
+    <div class="category__post_metadata">
+      <span class="category__post_tags small">
+        tags: [<%= article.tags.join(', ')%>]
+      </span>
 
-    <span class="category__post_author small">
-        author: <%= article.metadata[:page]['author']  %>
-    </span>
+      <span class="category__post_author small">
+          author: <%= article.metadata[:page]['author']  %>
+      </span>
+    </div>
   </article>
-  <% end %>
+
+<% end %>

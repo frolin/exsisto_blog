@@ -8,10 +8,10 @@ tags: web-scraping
 Ruby многогранен! Одна из его прекрасных граней — работа с данными.
 А благодаря гему [Mechanize]('https://github.com/sparklemotion/mechanize') мы можем с легкостю работать с данными по HTTP.
 
-> Гем Mechanize позволяет работать только со статичными данными, без участия javascript в генерации контента.
+> Гем Mechanize позволяет работать только со статичными данными, без участия javascript в генерации контента. 
 Для того что бы работать с динамическим контентом существует несколько гемов:
->       * Watir,
->       * Selenium WebDriver
+    * Watir
+    * Selenium WebDriver
 {: class="info"}
 
 
@@ -25,7 +25,7 @@ READMORE
  * Создадим метод инициализации браузера
  * Аргументом будем передовать адрес url
 
-~~~ruby
+```ruby
 require 'rubygems'
 require 'mechanize'
 require 'awesome_print' # Для красивого вывода списков.
@@ -35,11 +35,11 @@ def goto(url)
   agent.user_agent_alias =  'Linux Mozilla'
   agent.get('http://' + url)
 end
-~~~
+```
 
 Теперь запустим irb, и попробуем погулять по интернету через коммандную строку.
 
-~~~ruby
+```ruby
 >> ya_page = goto 'ya.ru'
 
 => #<Mechanize::Page
@@ -61,7 +61,7 @@ end
    {checkboxes}
    {file_uploads}
    {buttons [button:0x1745fd0 type: submit name:  value: ]}}
-~~~
+```
 
 Мы получили страницу, как объект класса Mechanize::Page со всеми вложенными объектами страницы.
 
@@ -77,7 +77,7 @@ end
 
 Попробуем отправить эту форму и посмотреть что же она выдаст.
 
-~~~ruby
+```ruby
 goto('ya.ru').form do |form| # => Mechanize::Form
   form['text'] = 'ruby is awesome'
   result_page = form.submit
@@ -91,9 +91,9 @@ goto('ya.ru').form do |form| # => Mechanize::Form
     }
   }
 end
-~~~
+```
 
-~~~ruby
+```ruby
 >>  [ 0] {
          :title => "A collection of awesome Ruby libraries, tools, frameworks...",
          :link => "http://awesome-ruby.com/"
@@ -118,7 +118,7 @@ end
          :title => "markets/awesome-ruby · GitHub",
          :link => "https://github.com/markets/awesome-ruby"
        }, ...
-~~~
+```
 
 
 
@@ -130,9 +130,9 @@ end
 Теперь можем работь с её данными через эти методы.
 Например так, мы получим всё что находиться в "теле" страницы в формате html.
 
-~~~ruby
+```ruby
 >> ya_page.body
-~~~
+```
 
 
 
@@ -142,7 +142,7 @@ end
 Но а пока мы хотим получать самые свежие посты с bash.org
 Для этого добавим еще один метод.
 
-~~~ruby
+```ruby
 def parsing(page)
   page.search('#body > div.quote').collect { |quote|
     {
@@ -152,13 +152,13 @@ def parsing(page)
       :text => quote.search('div.text').text
     }
 end
-~~~
+```
 
 
 
 итого мы получаем:
 
-~~~ruby
+```ruby
 require 'rubygems'
 require 'mechanize'
 require 'awesome_print'
@@ -181,4 +181,4 @@ end
 
 page = goto('www.bash.im')
 ap parsing(page)
-~~~
+```

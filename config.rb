@@ -19,10 +19,15 @@ sprockets.append_path File.join root, 'bower_components'
 
 activate :livereload
 
+config[:file_watcher_ignore] += [ /.idea\// ]
+
+
 
 activate :syntax
-set :markdown_engine, :kramdown
-set :markdown, fenced_code_blocks: true
+set :markdown_engine, :redcarpet
+set :markdown,
+    :fenced_code_blocks => true,
+    :smartypants => true
 
 
 
@@ -145,6 +150,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
+  deploy.remote = 'https://github.com/frolin/frolin.github.io.git'
   deploy.method = :git
   deploy.branch = 'master'
   deploy.build_before = true

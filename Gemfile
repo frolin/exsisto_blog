@@ -4,7 +4,12 @@ source 'http://rubygems.org'
 
 gem "middleman", "~> 3.4.0"
 gem "middleman-blog", "~> 3.5.3"
-gem 'middleman-deploy'
+gem 'middleman-syntax'
+gem 'middleman-livereload'
+# gem 'middleman-deploy'
+
+gem 'redcarpet'
+
 # gem 'middleman-blog-ui'
 # gem 'middleman-blog-drafts'
 
@@ -16,9 +21,6 @@ gem 'middleman-bower'
 
 #sass
 gem 'susy'
-gem 'middleman-syntax'
-gem 'redcarpet'
 gem 'modular-scale'
-gem 'middleman-livereload'
 
 # gem 'middleman-breadcrumbs'

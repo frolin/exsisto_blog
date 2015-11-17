@@ -1,0 +1,66 @@
+
+//                         ##
+//                         ##
+//  ######   ####   ##### #####
+//   ##  ## ##  ## ##      ##
+//   ##  ## ##  ##  #####  ##
+//   #####  ##  ##      ## ## ##
+//   ##      ####  ######   ###
+//  ####
+
+
+.post {
+  border-style:dashed;
+  border-color: #929292;
+}
+
+.post_title {
+  font-family: "Pt Sans";
+  color: rgb(89, 89, 89);
+}
+
+
+.post_author {
+  color: grey;
+}
+
+.post_tags {
+  font-family: 'Anonymous Pro' ;
+  color: #FDFDFD;
+  background: rgb(182, 182, 182);
+}
+
+.post_body {
+  font-family: "Pt Sans";
+
+}
+
+.readmore {
+  position: relative;
+  text-align: right;
+}
+.readmore a {
+
+}
+
+
+.post_metadata {
+
+}
+
+blockquote.info {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+article ul {
+  list-style-position: inside;
+  list-style-type: square;
+  @include margin-trailer;
+
+  li {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: antiquewhite;
+  }
+}

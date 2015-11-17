@@ -140,6 +140,5 @@
     <orderEntry type="library" scope="PROVIDED" name="uber (v0.0.15, RVM: ruby-1.9.3-p551-dev) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="uglifier (v2.7.2, RVM: ruby-1.9.3-p551-dev) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="xpath (v2.0.0, RVM: ruby-1.9.3-p551-dev) [gem]" level="application" />
-    <orderEntry type="library" name="compass-library" level="project" />
   </component>
 </module>

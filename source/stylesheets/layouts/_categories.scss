@@ -1,34 +1,31 @@
 
 
 $category_post : (
-        columns: 3 7 2,
+        columns: 7 5,
         output: isolate,
   //container: 1140px,
   //debug: (image: show)
 );
 
-.category-image {
-  width: 50%;
-  margin: 0 auto;
+
+
+.category__post_article {
+  @include container($category_post);
+  @include margin-trailer;
 }
 
-.category-post {
-  @include container($category_post)
-}
-
-.category__post_image {
-  @include span(1 first of $category_post);
+.category__post_title {
 }
 
 .category__post_tags {
-  @include span(1 of $category_post at 3)
+  float: left;
 }
 .category__post_author {
-  @include span(1 of $category_post at 3)
+  float: left;
 }
 
 .category__post_article {
-  @include span(1 of $category_post at 2)
+  //@include span(1 of $category_post at 2)
 }
 
 

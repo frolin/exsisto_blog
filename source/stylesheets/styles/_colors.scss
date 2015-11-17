@@ -1,0 +1,41 @@
+//               ###
+//                ##
+//   ####   ####  ##   #### ######   #####
+//  ##  ## ##  ## ##  ##  ## ##  ## ##
+//  ##     ##  ## ##  ##  ## ##      #####
+//  ##  ## ##  ## ##  ##  ## ##          ##
+//   ####   #### ####  #### ####    ######
+//
+
+
+//
+//$primary-color: rgb(0,0,0);
+//$primary-color-darken: darken($primary-color, 10%);
+//$primary-color-lighten: lighten($primary-color, 10%);
+//
+//$background-color: rgb(238,237,242);
+//
+//$blockquote: rgb(201,184,168);
+
+
+
+body {
+  background-color: #ffffff;
+}
+
+p {
+  //color: $primary-color;
+}
+
+
+article blockquote {
+}
+article blockquote.info p { margin: 0;  }
+article blockquote.info { }
+article .post_tags {}
+article .info { background-color: rgba(205,224,228, .8); }
+article ul {
+
+}
+
+
