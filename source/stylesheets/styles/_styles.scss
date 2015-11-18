@@ -8,8 +8,9 @@
 //
 
 .header__logo  {
-  font-family: 'Anonymous Pro' ;
+  //font-family: 'Anonymous Pro' ;
   margin-bottom: 0;
+  a {  text-decoration: none; }
 }
 
 
@@ -44,15 +45,9 @@
 //                                                     #####
 
 
-//
 .menu-tags  {
-  font-family: 'Anonymous Pro' ;
-  padding: 0 0 0 105px;
-  text-align: left;
+  text-align: center;
 }
-//
-//
-//
 .menu-tags a {
   letter-spacing: 2px;
   color: white;
@@ -60,8 +55,6 @@
   background: #757575;
   padding: 3px;
 }
-//
-//
 
 
 
@@ -90,9 +83,10 @@
 
 .breadcrumb__category {
   display: inline-block;
+  color: #757575;
 }
 
-.breadcrumb .category {
+.breadcrumb__category a {
   color: #757575;
   border-bottom: 1px dashed lightslategrey;
 }

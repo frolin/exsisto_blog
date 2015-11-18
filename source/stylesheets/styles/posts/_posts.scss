@@ -17,6 +17,11 @@
 .post_title {
   font-family: "Pt Sans";
   color: rgb(89, 89, 89);
+
+  a {
+    text-decoration: none;
+    border-bottom: 2px solid grey;
+  }
 }
 
 
@@ -51,7 +56,12 @@
 blockquote.info {
   padding-left: 1em;
   padding-right: 1em;
+  background-color: rgba(205,224,228, .8);
+
 }
+article blockquote.info p { margin: 0;  }
+article blockquote.info ul li {background: none;}
+
 
 article ul {
   list-style-position: inside;

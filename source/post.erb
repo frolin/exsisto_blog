@@ -1,11 +1,11 @@
 <% wrap_layout :layout do %>
-
+<% unless current_article.nil? %>
   <div class="breadcrumb">
-    <h3 class="breadcrumb__category"><%= post_breadcrumbs %></h3>
+    <h3 class="breadcrumb__category"><%= post_breadcrumbs(current_article) %></h3>
     <span class="delimiter">/</span>
   </div>
 
-  <article class="full_post">
+  <article id="<%= author(current_article) %>" class="full_post" >
 
     <div class="post_title">
       <h2><%= current_article.title %></h2>
@@ -16,6 +16,8 @@
     </div>
 
   </article>
+
+<% end %>
 
 <% end %>
 
